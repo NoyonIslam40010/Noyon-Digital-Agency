@@ -1,0 +1,454 @@
+@mixin border-radius($value) {
+  border-radius: $value;
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  -ms-border-radius: $value;
+  -o-border-radius: $value;
+}
+
+@mixin transition($value) {
+  transition: all $value;
+  -webkit-transition: all $value;
+  -moz-transition: all $value;
+  -ms-transition: all $value;
+  -o-transition: all $value;
+}
+
+
+
+$primery:#F52C2C;
+$text_color:#BECFD0;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  @include transition(1s);
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+button {
+  a {
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  margin-right: 20px;
+}
+
+//=================================================================================
+//                            header_section
+//==================================================================================
+
+.header_section {
+  background-color: #D5D2D2;
+  height: 80px;
+
+  .nav {
+    height: 80px;
+    display: flex;
+    align-items: center !important;
+    justify-content: space-between;
+
+    .title {
+      ul {
+        display: flex;
+
+        a {
+          margin-right: 20px;
+          font-size: 20px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+//=================================================================================
+//                            hero_section
+//==================================================================================
+
+.hero_section {
+  height: 900px;
+  background-blend-mode: overlay;
+
+  .title_con {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+
+    .title {
+      width: 50%;
+      text-align: center;
+
+      p {
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      .title_section {
+        font-size: 80px;
+        color: #ffffff;
+
+        span {
+          color: $primery;
+        }
+      }
+
+      .btn {
+        margin-top: 20px;
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        border: none;
+        margin-right: 20px;
+      }
+
+      .btn-more {
+        background-color: $primery;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+//=================================================================================
+//                            Services_section
+//==================================================================================
+
+.Services_section {
+  height: 1200px;
+  background-blend-mode: overlay;
+
+  .Services_title {
+    display: flex;
+    margin-top: 300px;
+    justify-content: space-between;
+
+    .btn-service {
+      @include border-radius(30px);
+      color: #9ba4a4;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      width: 50%;
+
+      p {
+        margin-top: 10px;
+        color: $text_color;
+        font-size: 22px;
+        line-height: 25px;
+      }
+
+      h1 {
+        color: $text_color;
+
+        span {
+          color: $primery;
+        }
+
+        font-size: 50px;
+        margin-top: 10px;
+      }
+
+      .man {
+        margin-top: 20px;
+        color: $text_color;
+
+        li {
+          font-size: 20px;
+          margin-left: 10px;
+        }
+
+        .img {
+          display: flex;
+          align-items: center;
+          margin-top: 20px;
+          width: 35%;
+          border-right: 1px solid #ff0000;
+
+          span {
+            margin-left: 20px;
+            color: #ffffff;
+            line-height: 20px;
+          }
+
+          img {
+            @include border-radius(1000px);
+            width: 70px;
+          }
+        }
+      }
+    }
+
+    .box_title {
+      margin-top: -100px;
+      width: 50%;
+      margin-left: 100px;
+      height: 600px;
+
+      .conten_box {
+        width: 100%;
+        height: 300px;
+        display: flex;
+
+        .box {
+          margin-right: 20px;
+          text-align: center;
+          box-sizing: border-box;
+          height: 350px;
+          width: 300px;
+          background-color: #fff;
+          @include border-radius(5px);
+
+          img {
+            margin-top: 70px;
+            width: 130px;
+          }
+
+          h4 {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//=================================================================================
+//                            viverra_box_section
+//==================================================================================
+
+.viverra_box_section {
+  .box_title {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 1500px;
+    margin-top: -100px;
+    background-color: $primery;
+    @include border-radius(10px);
+
+    .hr {
+      margin-left: 30px;
+      margin-right: 10px;
+      width: 2px;
+      height: 180px;
+      background-color: #808080;
+    }
+
+    .box_1 {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      height: 200px;
+
+      img {
+        width: 100px;
+      }
+
+      .con {
+        margin-left: 20px;
+
+        span {
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 15px;
+        }
+
+        h4 {
+          color: #ffffff;
+          font-size: 40px;
+        }
+      }
+    }
+
+    .box_2 {
+      width: 60vw;
+      display: flex;
+      align-content: center;
+
+      p {
+        font-size: 17px;
+        color: #ffffff;
+        margin-right: 10px;
+      }
+
+      button {
+        margin-top: -5px;
+        @include border-radius(1000000000px);
+        margin-right: 100px;
+        font-size: 15px;
+        width: 350px;
+      }
+    }
+  }
+}
+
+//=================================================================================
+//                            Blog_section
+//==================================================================================
+
+.Blog_section {
+  margin-top: 100px;
+  height: 700px;
+
+  .Conten_body {
+    h1 {
+      text-align: center;
+      font-size: 60px;
+
+      span {
+        color: $primery;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .box {
+    margin-right: 150px;
+    width: 350px;
+    box-sizing: border-box;
+    height: 500px;
+    box-shadow: 4px 4px 8px gray;
+    overflow: hidden;
+    @include border-radius(10px);
+
+    img {
+      width: 350px;
+      padding-bottom: 10px;
+      @include border-radius(10px);
+    }
+    .title{
+      padding: 20px;
+      h1{ 
+       text-align: left !important;
+        color:#363535;
+        font-size: 25px;
+      }
+      p{
+        text-align: left;
+         color:#363535;
+         margin-top: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+//========================================================================
+//                         footer_section
+//========================================================================
+
+
+footer {
+  background-color: #030303;
+  height: 600px;
+  border-bottom: 1px solid gray;
+
+  .hot_conten {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+
+    .title {
+
+      .icons{
+        i{
+          color: #ffffff;     
+        margin-right: 20px;
+        font-size: 20px;
+        margin-top: 20px;
+        }
+      }
+      img {
+        width: calc(50% - 50px);
+      }
+
+      p {
+        color: #ffffff;
+        margin-top: 20px;
+        line-height: 40px;
+      }
+
+      h3 {
+        color: #ffffff;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+
+        li {
+          a {
+            line-height: 30px;
+            color: #ffffff;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.Copyright {
+  background-color: #030303;
+  height: 100px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 30px;
+}
